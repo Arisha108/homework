@@ -1,5 +1,8 @@
 import masks
-def mask_account_card(card_account):
+
+
+def mask_account_card(card_account: str) -> str:
+    """Функция, которая выводит тип и замаскированный номер карты или счета"""
     card_account_clean = ""
     for i in card_account:
         if i.isdigit():
@@ -15,9 +18,5 @@ def mask_account_card(card_account):
         if i.isalpha() or i == " ":
             card_account_name += i
 
-    result = card_account_name + result_digits
+    result = str(card_account_name + result_digits)
     return result
-
-
-
-
