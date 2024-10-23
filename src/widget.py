@@ -1,0 +1,23 @@
+import masks
+def mask_account_card(card_account):
+    card_account_clean = ""
+    for i in card_account:
+        if i.isdigit():
+            card_account_clean += i
+
+    if len(card_account_clean) == 16:
+        result_digits = masks.get_mask_card_number(card_account_clean)
+    else:
+        result_digits = masks.get_mask_account(card_account_clean)
+
+    card_account_name = ""
+    for i in card_account:
+        if i.isalpha() or i == " ":
+            card_account_name += i
+
+    result = card_account_name + result_digits
+    return result
+
+
+
+
