@@ -22,7 +22,7 @@ def mask_account_card(card_account: str) -> str:
     return result
 
 
-def get_date(i):
-    result = i[8] + i[9] + "." + i[5] + i[6] + "." + i[0] + i[1] + i[2] + i[3]
+def get_date(i: str) -> str:
+    """Функция, которая изменяет формат даты"""
+    result = str(i[8] + i[9] + "." + i[5] + i[6] + "." + i[0] + i[1] + i[2] + i[3])
     return result
-
