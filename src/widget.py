@@ -20,3 +20,9 @@ def mask_account_card(card_account: str) -> str:
 
     result = str(card_account_name + result_digits)
     return result
+
+
+def get_date(i):
+    result = i[8] + i[9] + "." + i[5] + i[6] + "." + i[0] + i[1] + i[2] + i[3]
+    return result
+
