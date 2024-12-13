@@ -6,3 +6,10 @@ def filter_by_state(my_list, state='EXECUTED'):
     return new_data
 
 
+def sort_by_date(my_list, reverse=True):
+    new_data = sorted(my_list, key=lambda x: x['date'], reverse=reverse)
+
+    return new_data
+
+
+
