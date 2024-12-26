@@ -1,4 +1,4 @@
-def filter_by_state(my_list:list, state:str='EXECUTED') -> list:
+def filter_by_state(my_list: list, state: str = 'EXECUTED') -> list:
     """
     Функция, которая принимает на вход список словарей
     и возвращает отфильтрованный список по ключу state
@@ -10,14 +10,11 @@ def filter_by_state(my_list:list, state:str='EXECUTED') -> list:
     return new_data
 
 
-def sort_by_date(my_list:list, reverse:bool=True) -> list:
+def sort_by_date(my_list: list, reverse: bool = True) -> list:
     """
-    Функция, котооая принимает на вход список словарей
+    Функция, которая принимает на вход список словарей
     и возвращает отсортированный список по ключу date
     """
     new_data = sorted(my_list, key=lambda x: x['date'], reverse=reverse)
 
     return new_data
-
-
-
